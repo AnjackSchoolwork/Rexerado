@@ -20,6 +20,8 @@
     <script>scripts\state_motivated.gml</script>
     <script>scripts\state_play.gml</script>
     <script>scripts\state_idle.gml</script>
+    <script>scripts\enter_state_motivated.gml</script>
+    <script>scripts\can_see_thing.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Herd_Mind_Alpha</object>

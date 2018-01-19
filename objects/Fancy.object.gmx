@@ -44,6 +44,46 @@ move_l = 0
 move_r = 0
 move_v = 0
 move_h = 0
+
+// Bark
+charging_bark = false
+bark_charge = 0
+charge_time = 0
+max_bark_radius = 100
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Do things
+
+// If we are charging up a bark, track that
+if(charging_bark) {
+    charge_time = current_time - bark_charge_begin
+    if(charge_time &gt;= 1000) {
+        bark_charge = 10
+    }
+    else {
+        bark_charge = floor(charge_time/100)
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -113,7 +153,9 @@ if(keyboard_check(keys[? "RIGHT"])) {
 }
 
 if(keyboard_check(keys[? "BARK"])) {
-    
+    // Begin charging bark
+    bark_charge_begin = current_time
+    charging_bark = true
 }
 
 move_v = move_u + move_d
@@ -161,8 +203,10 @@ if(!keyboard_check(keys[? "RIGHT"])) {
     move_r = 0
 }
 
-if(keyboard_check(keys[? "BARK"])) {
-    
+if(!keyboard_check(keys[? "BARK"]) and charging_bark) {
+    charging_bark = false
+    bark(bark_charge)
+    bark_charge = 0
 }
 
 move_v = move_u + move_d

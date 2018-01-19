@@ -52,27 +52,14 @@ randomize()
             <string>draw_set_color(c_green)
 
 draw_text(10, 10, cat_base.state_current)
+draw_text(10, 30, Fancy.charging_bark)
+draw_text(10, 50, Fancy.charge_time)
+draw_text(10, 70, Fancy.bark_charge)
 
 draw_set_color(c_black)
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

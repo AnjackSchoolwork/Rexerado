@@ -1,24 +1,19 @@
-/// enter_state_wander(target)
+/// enter_state_wander()
 
-target = argument[0]
+// reinitialize state variables
+state_vars = undefined
 
-target.state_vars = undefined
-
-target.state_vars = ds_map_create()
+state_vars = ds_map_create()
 
 // Set home location
-ds_map_add(target.state_vars, "home_x", target.x)
-ds_map_add(target.state_vars, "home_y", target.y)
-// Initialize perception
-ds_map_add(target.state_vars, "perception_rad", 100)
-ds_map_add(target.state_vars, "perception_x", target.x)
-ds_map_add(target.state_vars, "perception_y", target.y)
+ds_map_add(state_vars, "home_x", x)
+ds_map_add(state_vars, "home_y", y)
 // Initialize wander target to home location
-ds_map_add(target.state_vars, "wander_x", target.x)
-ds_map_add(target.state_vars, "wander_y", target.y)
+ds_map_add(state_vars, "wander_x", x)
+ds_map_add(state_vars, "wander_y", y)
 // Initialize tarry
-ds_map_add(target.state_vars, "tarry_rad", 30)
-ds_map_add(target.state_vars, "tarry_time", 1)
-ds_map_add(target.state_vars, "last_tarry_time", date_current_datetime())
+ds_map_add(state_vars, "tarry_rad", 30)
+ds_map_add(state_vars, "tarry_time", 1)
+ds_map_add(state_vars, "last_tarry_time", date_current_datetime())
 
-target.state_current = "wandering"
+state_current = "wandering"

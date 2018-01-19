@@ -1,11 +1,8 @@
-/// wander_state(target)
-
-target = argument[0]
+/// wander_state()
 
 // Check perception radius - First thing it sees is fine
-perception_result = collision_circle(target.state_vars[? "perception_x"], target.state_vars[? "perception_y"], target.state_vars[? "perception_rad"], distraction_base, false, true)
-can_move = true
-// Calling object should always be moving toward their "move_target", if they are not already there
+perception_result = can_see_thing(distraction_base, perception_x, perception_y, perception_rad)
+
 if(perception_result != noone) {
         if(!place_meeting(x, y, perception_result.object_index)) {
             move_towards_point(perception_result.x, perception_result.y, speed_value)
@@ -13,7 +10,8 @@ if(perception_result != noone) {
         }
         else {
             speed = 0
-            current_state = "playing"
+            state_current = "playing"
+            exit
         }
 }
 

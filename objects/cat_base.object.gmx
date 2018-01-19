@@ -27,10 +27,18 @@
             <kind>1</kind>
             <string>/// Initialize variables
 
+// Motivation
+motivation = 0
+
 // Movement
 speed_value = 3
 move_target_x = undefined
 move_target_y = undefined
+
+// Perception
+perception_x = x
+perception_y = y
+perception_rad = 100
 
 // Define state
 state = ds_map_create()
@@ -69,7 +77,7 @@ enter_state_wander(self)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(state[? state_current], self)
+            <string>script_execute(state[? state_current])
 
 
 </string>
