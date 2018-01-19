@@ -54,6 +54,7 @@
     <instance objName="Fancy" x="544" y="416" name="inst_26F9FB7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cat_base" x="352" y="320" name="inst_230D8A74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="distraction_base" x="352" y="416" name="inst_9AB708B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UI_Controller" x="-64" y="96" name="inst_14635093" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

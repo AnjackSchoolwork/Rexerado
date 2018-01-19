@@ -21,4 +21,4 @@ ds_map_add(target.state_vars, "tarry_rad", 30)
 ds_map_add(target.state_vars, "tarry_time", 1)
 ds_map_add(target.state_vars, "last_tarry_time", date_current_datetime())
 
-target.state_current = state[? "wandering"]
+target.state_current = "wandering"

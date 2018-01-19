@@ -51,9 +51,7 @@ randomize()
             <kind>1</kind>
             <string>draw_set_color(c_green)
 
-draw_text(10, 10, Fancy.hspeed)
-
-draw_text(10, 30, Fancy.vspeed)
+draw_text(10, 10, cat_base.state_current)
 
 draw_set_color(c_black)
 </string>
