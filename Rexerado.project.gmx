@@ -22,18 +22,24 @@
     <script>scripts\state_idle.gml</script>
     <script>scripts\enter_state_motivated.gml</script>
     <script>scripts\can_see_thing.gml</script>
+    <script>scripts\get_objects_in_circle.gml</script>
+    <script>scripts\enter_state_play.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\Herd_Mind_Alpha</object>
     <object>objects\UI_Controller</object>
-    <object>objects\test_swarmer</object>
     <object>objects\Fancy</object>
     <object>objects\cat_base</object>
-    <object>objects\distraction_base</object>
+    <objects name="Distractions">
+      <object>objects\distraction_base</object>
+      <object>objects\ball</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_Level</room>
   </rooms>
+  <constants number="1">
+    <constant name="DEBUG">true</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

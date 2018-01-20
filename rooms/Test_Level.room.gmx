@@ -53,8 +53,13 @@
   <instances>
     <instance objName="Fancy" x="544" y="416" name="inst_26F9FB7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cat_base" x="352" y="320" name="inst_230D8A74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="distraction_base" x="352" y="416" name="inst_9AB708B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="UI_Controller" x="-64" y="96" name="inst_14635093" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ball" x="352" y="416" name="inst_F3CD520F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UI_Controller" x="0" y="32" name="inst_51D577C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="640" y="224" name="inst_E8528F84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="192" y="608" name="inst_B5AC5773" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="608" y="576" name="inst_A357CD94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="832" y="256" name="inst_5ADC903F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="224" y="128" name="inst_57B69788" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

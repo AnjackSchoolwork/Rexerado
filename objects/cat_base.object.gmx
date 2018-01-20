@@ -79,7 +79,19 @@ enter_state_wander(self)
             <kind>1</kind>
             <string>script_execute(state[? state_current])
 
+perceived_objects = get_objects_in_circle(x + percept_offset_x, y + percept_offset_y, perception_rad)
 
+if(motivation == 0) {
+    for(index = 0; index &lt; ds_list_size(perceived_objects); index++) {
+        obj_instance = perceived_objects[| index]
+        obj_parent = object_get_parent(obj_instance.object_index)
+        if(obj_parent == distraction_base) {
+            state_current = "playing"
+            enter_state_play(obj_instance)
+            exit
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -102,10 +114,15 @@ enter_state_wander(self)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// I am an arrow
+            <string>/// I am an cat
 
+image_angle = direction
 draw_sprite(sprite_index, image_index, x, y)
 
+if(DEBUG) {
+    draw_circle(x + percept_offset_x, y + percept_offset_y, perception_rad, true)
+    draw_arrow(x, y, x + lengthdir_x(10, direction), y + lengthdir_y(10, direction), 10)
+}
 </string>
           </argument>
         </arguments>

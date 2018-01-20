@@ -106,10 +106,13 @@ if(charging_bark) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// I am an arrow
+            <string>/// I am an dog
 draw_sprite(sprite_index, image_index, x, y)
-draw_set_color(c_blue)
-draw_arrow(x, y, x + lengthdir_x(15, direction), y + lengthdir_y(15, direction), 10)
+image_angle = direction
+if(DEBUG) {
+    draw_circle(x, y, max_bark_radius, true)
+    draw_arrow(x, y, x + lengthdir_x(10, direction), y + lengthdir_y(10, direction), 10)
+}
 
 
 </string>
