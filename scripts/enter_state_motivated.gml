@@ -13,5 +13,5 @@ ds_map_add(state_vars, "new_direction", point_direction(motivation_source.x, mot
 
 
 direction = state_vars[? "new_direction"]
-speed = speed_value
+speed = speed_value * 3
 

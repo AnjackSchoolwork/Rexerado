@@ -9,6 +9,7 @@
     <sprite>sprites\placeholder_1</sprite>
     <sprite>sprites\placeholder_2</sprite>
     <sprite>sprites\placeholder_3</sprite>
+    <sprite>sprites\Gate</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -33,6 +34,7 @@
       <object>objects\distraction_base</object>
       <object>objects\ball</object>
     </objects>
+    <object>objects\collection_point</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Test_Level</room>
