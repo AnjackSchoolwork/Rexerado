@@ -152,7 +152,7 @@ if(keyboard_check(keys[? "RIGHT"])) {
     move_r = 1
 }
 
-if(keyboard_check(keys[? "BARK"])) {
+if(keyboard_check(keys[? "BARK"]) and !charging_bark) {
     // Begin charging bark
     bark_charge_begin = current_time
     charging_bark = true

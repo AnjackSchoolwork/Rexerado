@@ -51,10 +51,10 @@ randomize()
             <kind>1</kind>
             <string>draw_set_color(c_green)
 
-draw_text(10, 10, cat_base.state_current)
-draw_text(10, 30, Fancy.charging_bark)
-draw_text(10, 50, Fancy.charge_time)
-draw_text(10, 70, Fancy.bark_charge)
+draw_text(10, 10, "State: " + string(cat_base.state_current))
+draw_text(10, 30, "Motivation: " + string(cat_base.motivation))
+draw_text(10, 70, "Bark Charge Time: " + string(Fancy.charge_time))
+draw_text(10, 90, "Bark Charge Power: " + string(Fancy.bark_charge))
 
 draw_set_color(c_black)
 </string>

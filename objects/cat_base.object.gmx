@@ -36,8 +36,8 @@ move_target_x = undefined
 move_target_y = undefined
 
 // Perception
-perception_x = x
-perception_y = y
+percept_offset_x = 0
+percept_offset_y = 0
 perception_rad = 100
 
 // Define state

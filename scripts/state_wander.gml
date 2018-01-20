@@ -1,7 +1,7 @@
 /// wander_state()
 
 // Check perception radius - First thing it sees is fine
-perception_result = can_see_thing(distraction_base, perception_x, perception_y, perception_rad)
+perception_result = can_see_thing(distraction_base, x + percept_offset_x, y + percept_offset_y, perception_rad)
 
 if(perception_result != noone) {
         if(!place_meeting(x, y, perception_result.object_index)) {
