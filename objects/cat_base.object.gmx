@@ -30,6 +30,9 @@
 // Motivation
 motivation = 0
 
+// Object of interest
+target_object = noone
+
 // Movement
 speed_value = 3
 move_target_x = undefined
