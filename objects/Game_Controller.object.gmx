@@ -25,14 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Randomize
-randomize()
+            <string>/// Initialize variables
+
+roaming_cats = 0
+corralled_cats = 0
+corralled_cats_min = 0
+level_complete = false
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,24 +53,51 @@ randomize()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-switch(room_get_name(room)) {
-    case "Main_Menu":
-        break
-    case "End_Game":
-        break
-    case "Credits":
-        break
-    case "Instructions":
-        break
-    default:
-        draw_set_color(c_green)
+            <string>/// Execute checks
+
+// If we're in the test level
+if(room_get_name(room) == room_get_name(Test_Level)) {
+    
+    // Check if we've completed level tasks
+    if(corralled_cats &gt;= corralled_cats_min) {
+        level_complete = true
+    }
+    
+    if(roaming_cats == 0) {
+        // Check for level win/loss condition
+        if(level_complete) {
         
-        draw_text(view_xview[view_current] + 10, view_yview[view_current] + 10, "Roam'n Cats: " + string(Game_Controller.roaming_cats))
-        draw_text(view_xview[view_current] + 10, view_yview[view_current] + 30, "Corralled Cats: " + string(collection_point.cat_count))
+            // You win!
         
-        draw_set_color(c_black)
+        }
+        else {    
+            // You lose.
+        }
 }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>roaming_cats = instance_number(cat_base)
 </string>
           </argument>
         </arguments>

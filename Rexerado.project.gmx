@@ -43,6 +43,7 @@
     <objects name="btns">
       <object>objects\btn_play</object>
     </objects>
+    <object>objects\Game_Controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>
