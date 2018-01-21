@@ -10,6 +10,11 @@
     <sprite>sprites\placeholder_2</sprite>
     <sprite>sprites\placeholder_3</sprite>
     <sprite>sprites\Gate</sprite>
+    <sprites name="btns">
+      <sprite>sprites\spr_btn_exit</sprite>
+      <sprite>sprites\spr_btn_play</sprite>
+      <sprite>sprites\spr_btn_info</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -35,9 +40,16 @@
       <object>objects\ball</object>
     </objects>
     <object>objects\collection_point</object>
+    <objects name="btns">
+      <object>objects\btn_play</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Main_Menu</room>
     <room>rooms\Test_Level</room>
+    <room>rooms\End_Game</room>
+    <room>rooms\Credits</room>
+    <room>rooms\Instructions</room>
   </rooms>
   <constants number="1">
     <constant name="DEBUG">true</constant>

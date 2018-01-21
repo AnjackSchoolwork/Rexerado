@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -49,12 +49,24 @@ randomize()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_green)
-
-draw_text(view_xview[view_current] + 10, view_yview[view_current] + 10, "Roam'n Cats: " + string(instance_number(cat_base)))
-draw_text(view_xview[view_current] + 10, view_yview[view_current] + 30, "Corralled Cats: " + string(collection_point.cat_count))
-
-draw_set_color(c_black)
+            <string>
+switch(room_get_name(room)) {
+    case "Main_Menu":
+        break
+    case "End_Game":
+        break
+    case "Credits":
+        break
+    case "Instructions":
+        break
+    default:
+        draw_set_color(c_green)
+        
+        draw_text(view_xview[view_current] + 10, view_yview[view_current] + 10, "Roam'n Cats: " + string(instance_number(cat_base)))
+        draw_text(view_xview[view_current] + 10, view_yview[view_current] + 30, "Corralled Cats: " + string(collection_point.cat_count))
+        
+        draw_set_color(c_black)
+}
 </string>
           </argument>
         </arguments>
