@@ -15,6 +15,7 @@
       <sprite>sprites\spr_btn_play</sprite>
       <sprite>sprites\spr_btn_info</sprite>
     </sprites>
+    <sprite>sprites\barrier_placeholder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -31,6 +32,9 @@
     <script>scripts\get_objects_in_circle.gml</script>
     <script>scripts\enter_state_play.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_menu</font>
+  </fonts>
   <objects name="objects">
     <object>objects\UI_Controller</object>
     <object>objects\Fancy</object>
@@ -44,6 +48,8 @@
       <object>objects\btn_play</object>
     </objects>
     <object>objects\Game_Controller</object>
+    <object>objects\barrier</object>
+    <object>objects\mobile_base</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>
