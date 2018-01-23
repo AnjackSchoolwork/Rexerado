@@ -29,7 +29,7 @@
 
 roaming_cats = 0
 corralled_cats = 0
-corralled_cats_min = 0
+corralled_cats_min = 3
 level_complete = false
 </string>
           </argument>
@@ -59,7 +59,7 @@ level_complete = false
 if(room_get_name(room) == room_get_name(Test_Level)) {
     
     // Check if we've completed level tasks
-    if(corralled_cats &gt;= corralled_cats_min) {
+    if(collection_point.cat_count &gt;= corralled_cats_min) {
         level_complete = true
     }
     
@@ -73,7 +73,7 @@ if(room_get_name(room) == room_get_name(Test_Level)) {
         else {    
             // You lose.
         }
-}
+    }
 }
 </string>
           </argument>

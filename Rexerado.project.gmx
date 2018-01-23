@@ -16,6 +16,14 @@
       <sprite>sprites\spr_btn_info</sprite>
     </sprites>
     <sprite>sprites\barrier_placeholder</sprite>
+    <sprites name="cat">
+      <sprite>sprites\cat_sit_horiz</sprite>
+      <sprite>sprites\cat_sit_vert_face</sprite>
+      <sprite>sprites\cat_sit_vert_back</sprite>
+    </sprites>
+    <sprites name="dog">
+      <sprite>sprites\dog_face</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
