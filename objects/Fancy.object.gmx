@@ -49,7 +49,7 @@ move_h = 0
 charging_bark = false
 bark_charge = 0
 charge_time = 0
-max_bark_radius = 100
+max_bark_radius = 180
 </string>
           </argument>
         </arguments>

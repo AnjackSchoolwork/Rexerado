@@ -24,6 +24,7 @@
     <sprites name="dog">
       <sprite>sprites\dog_face</sprite>
     </sprites>
+    <sprite>sprites\pre_pickle</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -58,6 +59,8 @@
     <object>objects\Game_Controller</object>
     <object>objects\barrier</object>
     <object>objects\mobile_base</object>
+    <object>objects\cucumber</object>
+    <object>objects\pick_up_base</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>

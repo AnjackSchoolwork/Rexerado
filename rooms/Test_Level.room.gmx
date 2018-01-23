@@ -64,6 +64,7 @@
     <instance objName="barrier" x="2016" y="1024" name="inst_6F525F41" locked="0" code="" scaleX="3.375" scaleY="62.25" colour="4294967295" rotation="0"/>
     <instance objName="barrier" x="1024" y="2048" name="inst_710F3F78" locked="0" code="" scaleX="67.15625" scaleY="-2.16129040718079" colour="4294967295" rotation="0"/>
     <instance objName="barrier" x="1024" y="32" name="inst_4F490691" locked="0" code="" scaleX="67.15625" scaleY="-2.16129040718079" colour="4294967295" rotation="0"/>
+    <instance objName="cucumber" x="480" y="832" name="inst_FF592AF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
