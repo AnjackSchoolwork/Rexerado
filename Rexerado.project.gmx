@@ -28,6 +28,7 @@
       <sprite>sprites\dog_face</sprite>
     </sprites>
     <sprite>sprites\pre_pickle</sprite>
+    <sprite>sprites\spr_Instructions</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -59,6 +60,8 @@
     <object>objects\collection_point</object>
     <objects name="btns">
       <object>objects\btn_play</object>
+      <object>objects\btn_info</object>
+      <object>objects\btn_exit</object>
     </objects>
     <object>objects\Game_Controller</object>
     <object>objects\barrier</object>
