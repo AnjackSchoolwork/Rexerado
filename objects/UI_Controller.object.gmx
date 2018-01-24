@@ -52,6 +52,13 @@ randomize()
             <string>
 switch(room_get_name(room)) {
     case "Main_Menu":
+        draw_set_color(c_white)
+        draw_set_font(fnt_menu)
+        draw_set_halign(fa_center)
+        draw_set_valign(fa_middle)
+        draw_text(view_xview[view_current] + view_wview[view_current] / 2, view_yview[view_current] + view_hview[view_current] / 2, "Rexerado")
+        draw_set_halign(fa_left)
+        draw_set_valign(fa_top)
         break
     case "End_Game":
         result_text = "Lost"
@@ -72,6 +79,7 @@ switch(room_get_name(room)) {
         break
     default:
         draw_set_color(c_green)
+        draw_set_font(fnt_UI)
         
         draw_text(view_xview[view_current] + 10, view_yview[view_current] + 10, "Roam'n Cats: " + string(Game_Controller.roaming_cats))
         draw_text(view_xview[view_current] + 10, view_yview[view_current] + 30, "Corralled Cats: " + string(collection_point.cat_count))

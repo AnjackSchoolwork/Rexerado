@@ -159,6 +159,7 @@ if(keyboard_check(keys[? "BARK"]) and !charging_bark) {
     // Begin charging bark
     bark_charge_begin = current_time
     charging_bark = true
+    audio_play_sound(snd_growl, 1, true)
 }
 
 move_v = move_u + move_d
@@ -208,6 +209,10 @@ if(!keyboard_check(keys[? "RIGHT"])) {
 
 if(!keyboard_check(keys[? "BARK"]) and charging_bark) {
     charging_bark = false
+    if(audio_is_playing(snd_growl)){
+        audio_stop_sound(snd_growl)
+        audio_play_sound(snd_bark, 1, false)
+    }
     bark(bark_charge)
     bark_charge = 0
 }
