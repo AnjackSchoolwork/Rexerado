@@ -9,16 +9,11 @@
     <sound>sound\snd_bark</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\placeholder_1</sprite>
-    <sprite>sprites\placeholder_2</sprite>
-    <sprite>sprites\placeholder_3</sprite>
-    <sprite>sprites\Gate</sprite>
     <sprites name="btns">
       <sprite>sprites\spr_btn_exit</sprite>
       <sprite>sprites\spr_btn_play</sprite>
       <sprite>sprites\spr_btn_info</sprite>
     </sprites>
-    <sprite>sprites\barrier_placeholder</sprite>
     <sprites name="cat">
       <sprite>sprites\cat_sit_horiz</sprite>
       <sprite>sprites\cat_sit_vert_face</sprite>
@@ -28,9 +23,25 @@
       <sprite>sprites\dog_face</sprite>
     </sprites>
     <sprite>sprites\pre_pickle</sprite>
-    <sprite>sprites\spr_Instructions</sprite>
+    <sprites name="Placeholders">
+      <sprite>sprites\placeholder_1</sprite>
+      <sprite>sprites\placeholder_2</sprite>
+      <sprite>sprites\placeholder_3</sprite>
+      <sprite>sprites\Gate</sprite>
+      <sprite>sprites\barrier_placeholder</sprite>
+      <sprite>sprites\spr_Instructions</sprite>
+    </sprites>
+    <sprites name="Scenery">
+      <sprite>sprites\spr_bush</sprite>
+      <sprite>sprites\spr_grass</sprite>
+      <sprite>sprites\spr_dirt_s</sprite>
+      <sprite>sprites\spr_dirt</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bkgrnd_dirt</background>
+    <background>background\bkgrnd_dirt_s</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\bark.gml</script>
@@ -68,6 +79,10 @@
     <object>objects\mobile_base</object>
     <object>objects\cucumber</object>
     <object>objects\pick_up_base</object>
+    <objects name="Scenery">
+      <object>objects\obj_bush</object>
+      <object>objects\obj_grass</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>

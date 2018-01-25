@@ -57,8 +57,6 @@ switch(room_get_name(room)) {
         draw_set_halign(fa_center)
         draw_set_valign(fa_middle)
         draw_text(view_xview[view_current] + view_wview[view_current] / 2, view_yview[view_current] + view_hview[view_current] / 2, "Rexerado")
-        draw_set_halign(fa_left)
-        draw_set_valign(fa_top)
         break
     case "End_Game":
         result_text = "Lost"
@@ -74,11 +72,18 @@ switch(room_get_name(room)) {
         draw_text(view_xview[view_current] + view_wview[view_current] / 2, view_yview[view_current] + view_hview[view_current] - 36, "Press (nearly) any key to continue.")
         break
     case "Credits":
+        draw_set_color(c_white)
+        draw_set_font(fnt_menu)
+        draw_set_halign(fa_center)
+        draw_set_valign(fa_middle)
+        draw_text(view_xview[view_current] + view_wview[view_current] / 2, view_yview[view_current] + view_hview[view_current] / 2, "Credits go here.")
         break
     case "Instructions":
         draw_sprite(spr_Instructions, -1, 0, 0)
         break
     default:
+        draw_set_halign(fa_left)
+        draw_set_valign(fa_top)
         draw_set_color(c_green)
         draw_set_font(fnt_UI)
         
@@ -112,14 +117,32 @@ switch(room_get_name(room)) {
             <kind>1</kind>
             <string>/// Some other keyboard controls
 
-if(room == End_Game) {
+if(keyboard_check(vk_escape)) {
+    if(room == Main_Menu) {
+        game_end()
+    }
+    else {
+        room = Main_Menu
+    }
+}
+else if(keyboard_check(ord('P'))){
+   if(room_exists(room_previous(room))) {
+        room = room_previous(room)
+   }
+}
+else if (keyboard_check(ord('N'))) {
+    if(room_exists(room_next(room))) {
+        room = room_next(room)
+    }
+}
+else if(room == End_Game) {
     room = Credits
 }
 else if (room == Credits) {
     game_restart()
 }
 else if (room == Instructions) {
-    room = Main_Menu
+    room = Credits
 }
 else {
     if(keyboard_check(ord("R"))) {
