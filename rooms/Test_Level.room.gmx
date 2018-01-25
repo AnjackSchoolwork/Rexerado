@@ -52,13 +52,7 @@
   </views>
   <instances>
     <instance objName="Fancy" x="1024" y="416" name="inst_26F9FB7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ball" x="384" y="416" name="inst_F3CD520F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cat_base" x="448" y="288" name="inst_230D8A74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cat_base" x="640" y="224" name="inst_E8528F84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cat_base" x="192" y="608" name="inst_B5AC5773" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cat_base" x="608" y="576" name="inst_A357CD94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cat_base" x="384" y="640" name="inst_5ADC903F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cat_base" x="224" y="256" name="inst_57B69788" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ball" x="416" y="480" name="inst_F3CD520F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="collection_point" x="1632" y="1728" name="inst_545864A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="barrier" x="-32" y="1024" name="inst_52853F35" locked="0" code="" scaleX="2.64516139030457" scaleY="63.125" colour="4294967295" rotation="0"/>
     <instance objName="barrier" x="2016" y="1024" name="inst_6F525F41" locked="0" code="" scaleX="3.375" scaleY="62.25" colour="4294967295" rotation="0"/>
@@ -91,6 +85,15 @@
     <instance objName="obj_grass" x="352" y="1696" name="inst_F82DCBD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass" x="832" y="1728" name="inst_658C7BDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass" x="320" y="192" name="inst_7DB33794" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cucumber" x="832" y="672" name="inst_04FD151C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cucumber" x="672" y="896" name="inst_3C6782DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cucumber" x="1056" y="544" name="inst_306E26E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="256" y="352" name="inst_A3DC76F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="416" y="608" name="inst_0E691AD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="576" y="416" name="inst_5C64EF5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="608" y="544" name="inst_D48A3A1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="640" y="288" name="inst_1F851327" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cat_base" x="224" y="544" name="inst_6B0F06A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

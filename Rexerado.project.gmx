@@ -21,6 +21,9 @@
     </sprites>
     <sprites name="dog">
       <sprite>sprites\dog_face</sprite>
+      <sprite>sprites\dog_right</sprite>
+      <sprite>sprites\dog_rear</sprite>
+      <sprite>sprites\dog_left</sprite>
     </sprites>
     <sprite>sprites\pre_pickle</sprite>
     <sprites name="Placeholders">
@@ -83,6 +86,7 @@
       <object>objects\obj_bush</object>
       <object>objects\obj_grass</object>
     </objects>
+    <object>objects\bandit</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>

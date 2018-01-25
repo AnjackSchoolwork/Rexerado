@@ -108,7 +108,12 @@ if(charging_bark) {
             <kind>1</kind>
             <string>/// I am an dog
 draw_sprite(sprite_index, image_index, x, y)
-image_angle = direction
+
+if(0 &lt;= direction &lt; 45 or 360 &gt;= direction &gt; 315) {
+    sprite_index = dog_right
+}
+
+
 if(DEBUG) {
     draw_circle(x, y, max_bark_radius, true)
     draw_arrow(x, y, x + lengthdir_x(10, direction), y + lengthdir_y(10, direction), 10)

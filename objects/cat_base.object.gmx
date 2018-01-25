@@ -95,6 +95,13 @@ if(motivation == 0) {
         }
     }
 }
+
+for(index = 0; index &lt; ds_list_size(perceived_objects); index++) {
+    obj_instance = perceived_objects[| index]
+    if(obj_instance.object_index == cucumber) {
+        direction = point_direction(x, y, -x, -y)
+    }
+}
 </string>
           </argument>
         </arguments>
