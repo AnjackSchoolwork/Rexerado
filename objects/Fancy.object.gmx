@@ -29,12 +29,17 @@
 
 // Configure controls
 keys = ds_map_create()
+buttons = ds_map_create()
+gampad = UI_Controller.gamepad
 
 ds_map_add(keys, "UP", ord('W'))
 ds_map_add(keys, "DOWN", ord('S'))
 ds_map_add(keys, "LEFT", ord('A'))
 ds_map_add(keys, "RIGHT", ord('D'))
-ds_map_add(keys, "BARK", vk_space)
+ds_map_add(keys, "BARK", vk_rshift)
+ds_map_add(buttons, "BARK", gp_face1)
+ds_map_add(keys, "GRAB", vk_space)
+ds_map_add(buttons, "GRAB", gp_face2)
 
 // Default speed and move values
 speed_value = 10
@@ -50,6 +55,9 @@ charging_bark = false
 bark_charge = 0
 charge_time = 0
 max_bark_radius = 180
+
+// Held objects
+obj_in_mouth = noone
 </string>
           </argument>
         </arguments>
@@ -74,6 +82,22 @@ max_bark_radius = 180
             <kind>1</kind>
             <string>/// Do things
 
+// If we're carrying anything, move it with us
+if(obj_in_mouth != noone) {
+    obj_in_mouth.y = y
+    switch(image_index) {
+        case dog_right:
+            obj_in_mouth.x = x + (sprite_width / 2)
+            break
+        case dog_left:
+            obj_in_mouth.x = x - (sprite_width / 2)
+            break
+        default:
+            obj_in_mouth.x = x
+            break
+    }
+}
+
 // If we are charging up a bark, track that
 if(charging_bark) {
     charge_time = current_time - bark_charge_begin
@@ -83,6 +107,107 @@ if(charging_bark) {
     else {
         bark_charge = floor(charge_time/100)
     }
+}
+
+// Check gamepad inputs
+if(gamepad_is_connected(0)) {
+    vspeed = gamepad_axis_value(0, gp_axislv) * speed_value
+    hspeed = gamepad_axis_value(0, gp_axislh) * speed_value
+    
+    if(gamepad_button_check_pressed(0, buttons[? "BARK"]) and !charging_bark) {
+        bark_charge_begin = current_time
+        charging_bark = true
+        audio_play_sound(snd_growl, 1, true)
+    }
+    else if (charging_bark and gamepad_button_check_released(0, buttons[? "BARK"])) {
+        charging_bark = false
+        if(audio_is_playing(snd_growl))  {
+            audio_stop_sound(snd_growl)
+            audio_play_sound(snd_bark, 1, false)
+        }
+        bark(bark_charge)
+        bark_charge = 0
+    }
+    
+    if(gamepad_button_check_pressed(0, buttons[? "GRAB"])) {
+        if(obj_in_mouth != noone) {
+            // Spit it out!
+            obj_in_mouth.direction = direction
+            obj_in_mouth.speed = 10
+            obj_in_mouth = noone
+        }
+        else {
+            // Otherwise check for pick-up-able
+            if(sprite_width &gt; sprite_height) {
+                grab_radius = sprite_width / 2
+            }
+            else
+            {
+                grab_radius = sprite_height / 2
+            }
+            
+            local_pickups = get_objects_in_circle(x, y, sprite_width/2)
+            
+            for(index = 0; index &lt; ds_list_size(local_pickups); index++) {
+                if(object_is_ancestor(local_pickups[| index].object_index, pick_up_base)) {
+                    obj_in_mouth = local_pickups[| index]
+                }
+            }
+        }
+    }
+}
+else // Check the keyboard
+{
+    if(keyboard_check(keys[? "UP"])) {
+        move_u = -1
+    }
+    else
+    {
+        move_u = 0
+    }
+    
+    if(keyboard_check(keys[? "DOWN"])) {
+        move_d = 1
+    }
+    else {
+        move_d = 0
+    }
+    
+    if(keyboard_check(keys[? "LEFT"])) {
+        move_l = -1
+    }
+    else {
+        move_l = 0
+    }
+    
+    if(keyboard_check(keys[? "RIGHT"])) {
+        move_r = 1
+    }
+    else {
+        move_r = 0
+    }
+    
+    if(keyboard_check(keys[? "BARK"]) and !charging_bark) {
+        // Begin charging bark
+        bark_charge_begin = current_time
+        charging_bark = true
+        audio_play_sound(snd_growl, 1, true)
+    }
+    else if(!keyboard_check(keys[? "BARK"]) and charging_bark) {
+        charging_bark = false
+        if(audio_is_playing(snd_growl)){
+            audio_stop_sound(snd_growl)
+            audio_play_sound(snd_bark, 1, false)
+        }
+        bark(bark_charge)
+        bark_charge = 0
+    }
+    
+    move_v = move_u + move_d
+    move_h = move_l + move_r
+    
+    vspeed = speed_value * move_v
+    hspeed = speed_value * move_h
 }
 </string>
           </argument>
@@ -120,113 +245,6 @@ if(DEBUG) {
 }
 
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Keyboard control
-
-if(keyboard_check(keys[? "UP"])) {
-    move_u = -1
-}
-
-if(keyboard_check(keys[? "DOWN"])) {
-    move_d = 1
-}
-
-if(keyboard_check(keys[? "LEFT"])) {
-    move_l = -1
-}
-
-if(keyboard_check(keys[? "RIGHT"])) {
-    move_r = 1
-}
-
-if(keyboard_check(keys[? "BARK"]) and !charging_bark) {
-    // Begin charging bark
-    bark_charge_begin = current_time
-    charging_bark = true
-    audio_play_sound(snd_growl, 1, true)
-}
-
-move_v = move_u + move_d
-move_h = move_l + move_r
-
-vspeed = speed_value * move_v
-hspeed = speed_value * move_h
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="10" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Key release
-
-if(!keyboard_check(keys[? "UP"])) {
-    move_u = 0
-}
-
-if(!keyboard_check(keys[? "DOWN"])) {
-    move_d = 0
-}
-
-if(!keyboard_check(keys[? "LEFT"])) {
-    move_l = 0
-}
-
-if(!keyboard_check(keys[? "RIGHT"])) {
-    move_r = 0
-}
-
-if(!keyboard_check(keys[? "BARK"]) and charging_bark) {
-    charging_bark = false
-    if(audio_is_playing(snd_growl)){
-        audio_stop_sound(snd_growl)
-        audio_play_sound(snd_bark, 1, false)
-    }
-    bark(bark_charge)
-    bark_charge = 0
-}
-
-move_v = move_u + move_d
-move_h = move_l + move_r
-
-vspeed = speed_value * move_v
-hspeed = speed_value * move_h
 </string>
           </argument>
         </arguments>

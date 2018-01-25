@@ -87,6 +87,7 @@
       <object>objects\obj_grass</object>
     </objects>
     <object>objects\bandit</object>
+    <object>objects\mobile_object_base</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>
