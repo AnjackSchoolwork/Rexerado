@@ -141,17 +141,19 @@ else {
             <string>/// I am an dog
 draw_sprite(sprite_index, image_index, x, y)
 
-if((0 &lt;= direction and direction &lt; 45) or (360 &gt;= direction and direction &gt; 315)) {
-    sprite_index = dog_right
-}
-else if(45 &lt;= direction and direction &lt; 135) {
-    sprite_index = dog_rear
-}
-else if(135 &lt;= direction and direction &lt; 225) {
-    sprite_index = dog_left
-}
-else {
-    sprite_index = dog_face
+if(speed &gt; 0){
+    if((0 &lt;= direction and direction &lt; 45) or (360 &gt;= direction and direction &gt; 315)) {
+        sprite_index = dog_right
+    }
+    else if(45 &lt;= direction and direction &lt; 135) {
+        sprite_index = dog_rear
+    }
+    else if(135 &lt;= direction and direction &lt; 225) {
+        sprite_index = dog_left
+    }
+    else {
+        sprite_index = dog_face
+    }
 }
 
 
