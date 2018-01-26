@@ -58,6 +58,7 @@
     <script>scripts\can_see_thing.gml</script>
     <script>scripts\get_objects_in_circle.gml</script>
     <script>scripts\enter_state_play.gml</script>
+    <script>scripts\do_input_actions.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_menu</font>

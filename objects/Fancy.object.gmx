@@ -58,6 +58,7 @@ max_bark_radius = 180
 
 // Held objects
 obj_in_mouth = noone
+grabbing = false
 </string>
           </argument>
         </arguments>
@@ -85,12 +86,12 @@ obj_in_mouth = noone
 // If we're carrying anything, move it with us
 if(obj_in_mouth != noone) {
     obj_in_mouth.y = y
-    switch(image_index) {
+    switch(sprite_index) {
         case dog_right:
-            obj_in_mouth.x = x + (sprite_width / 2)
+            obj_in_mouth.x = x + lengthdir_x(sprite_width / 2, direction)
             break
         case dog_left:
-            obj_in_mouth.x = x - (sprite_width / 2)
+            obj_in_mouth.x = x + lengthdir_x(sprite_width / 2, direction)
             break
         default:
             obj_in_mouth.x = x
@@ -109,105 +110,11 @@ if(charging_bark) {
     }
 }
 
-// Check gamepad inputs
 if(gamepad_is_connected(0)) {
-    vspeed = gamepad_axis_value(0, gp_axislv) * speed_value
-    hspeed = gamepad_axis_value(0, gp_axislh) * speed_value
-    
-    if(gamepad_button_check_pressed(0, buttons[? "BARK"]) and !charging_bark) {
-        bark_charge_begin = current_time
-        charging_bark = true
-        audio_play_sound(snd_growl, 1, true)
-    }
-    else if (charging_bark and gamepad_button_check_released(0, buttons[? "BARK"])) {
-        charging_bark = false
-        if(audio_is_playing(snd_growl))  {
-            audio_stop_sound(snd_growl)
-            audio_play_sound(snd_bark, 1, false)
-        }
-        bark(bark_charge)
-        bark_charge = 0
-    }
-    
-    if(gamepad_button_check_pressed(0, buttons[? "GRAB"])) {
-        if(obj_in_mouth != noone) {
-            // Spit it out!
-            obj_in_mouth.direction = direction
-            obj_in_mouth.speed = 10
-            obj_in_mouth = noone
-        }
-        else {
-            // Otherwise check for pick-up-able
-            if(sprite_width &gt; sprite_height) {
-                grab_radius = sprite_width / 2
-            }
-            else
-            {
-                grab_radius = sprite_height / 2
-            }
-            
-            local_pickups = get_objects_in_circle(x, y, sprite_width/2)
-            
-            for(index = 0; index &lt; ds_list_size(local_pickups); index++) {
-                if(object_is_ancestor(local_pickups[| index].object_index, pick_up_base)) {
-                    obj_in_mouth = local_pickups[| index]
-                }
-            }
-        }
-    }
+    do_input_actions(buttons, true)
 }
-else // Check the keyboard
-{
-    if(keyboard_check(keys[? "UP"])) {
-        move_u = -1
-    }
-    else
-    {
-        move_u = 0
-    }
-    
-    if(keyboard_check(keys[? "DOWN"])) {
-        move_d = 1
-    }
-    else {
-        move_d = 0
-    }
-    
-    if(keyboard_check(keys[? "LEFT"])) {
-        move_l = -1
-    }
-    else {
-        move_l = 0
-    }
-    
-    if(keyboard_check(keys[? "RIGHT"])) {
-        move_r = 1
-    }
-    else {
-        move_r = 0
-    }
-    
-    if(keyboard_check(keys[? "BARK"]) and !charging_bark) {
-        // Begin charging bark
-        bark_charge_begin = current_time
-        charging_bark = true
-        audio_play_sound(snd_growl, 1, true)
-    }
-    else if(!keyboard_check(keys[? "BARK"]) and charging_bark) {
-        charging_bark = false
-        if(audio_is_playing(snd_growl)){
-            audio_stop_sound(snd_growl)
-            audio_play_sound(snd_bark, 1, false)
-        }
-        bark(bark_charge)
-        bark_charge = 0
-    }
-    
-    move_v = move_u + move_d
-    move_h = move_l + move_r
-    
-    vspeed = speed_value * move_v
-    hspeed = speed_value * move_h
+else {
+    do_input_actions(keys, false)
 }
 </string>
           </argument>
@@ -234,8 +141,17 @@ else // Check the keyboard
             <string>/// I am an dog
 draw_sprite(sprite_index, image_index, x, y)
 
-if(0 &lt;= direction &lt; 45 or 360 &gt;= direction &gt; 315) {
+if((0 &lt;= direction and direction &lt; 45) or (360 &gt;= direction and direction &gt; 315)) {
     sprite_index = dog_right
+}
+else if(45 &lt;= direction and direction &lt; 135) {
+    sprite_index = dog_rear
+}
+else if(135 &lt;= direction and direction &lt; 225) {
+    sprite_index = dog_left
+}
+else {
+    sprite_index = dog_face
 }
 
 
