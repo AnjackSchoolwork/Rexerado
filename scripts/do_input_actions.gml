@@ -5,8 +5,13 @@ is_gamepad = argument[1]
 
 // Check gamepad inputs
 if(is_gamepad) {
-    vspeed = gamepad_axis_value(0, gp_axislv) * speed_value
-    hspeed = gamepad_axis_value(0, gp_axislh) * speed_value
+    v_value = gamepad_axis_value(0, gp_axislv)
+    h_value = gamepad_axis_value(0, gp_axislh)
+    vector_len = sqrt(sqr(v_value) + sqr(h_value))
+    speed = vector_len * speed_value
+    if(speed > 0) {
+        direction = point_direction(x, y, x + h_value, y + v_value)
+    }
     
     if(gamepad_button_check_pressed(0, buttons[? "BARK"]) and !charging_bark) {
         bark_charge_begin = current_time
@@ -47,6 +52,8 @@ if(is_gamepad) {
                 if(object_is_ancestor(local_pickups[| index].object_index, pick_up_base)) {
                     obj_in_mouth = local_pickups[| index]
                     obj_in_mouth.depth = depth - 1
+                    orient_obj_in_mouth()
+                    break
                 }
             }
         }
@@ -103,7 +110,7 @@ else // Check the keyboard
         if(obj_in_mouth != noone) {
             grabbing = true
             // Spit it out!
-            obj_in_mouth.direction = direction
+            obj_in_mouth.direction = last_direction
             obj_in_mouth.speed = 10
             obj_in_mouth.x = x + 10 + lengthdir_x((sprite_width/2) + 10, direction)
             obj_in_mouth.depth = depth + 1
@@ -126,6 +133,7 @@ else // Check the keyboard
                     obj_in_mouth = local_pickups[| index]
                     grabbing = true
                     obj_in_mouth.depth = depth - 1
+                    orient_obj_in_mouth()
                     break
                 }
             }
@@ -138,6 +146,12 @@ else // Check the keyboard
     move_v = move_u + move_d
     move_h = move_l + move_r
     
-    vspeed = speed_value * move_v
-    hspeed = speed_value * move_h
+    v_value = speed_value * move_v
+    h_value = speed_value * move_h
+    
+    vector_len = sqrt(sqr(v_value) + sqr(h_value))
+    speed = vector_len * speed_value
+    if(speed > 0) {
+        direction = point_direction(x, y, x + h_value, y + v_value)
+    }
 }

@@ -42,6 +42,7 @@ ds_map_add(keys, "GRAB", vk_space)
 ds_map_add(buttons, "GRAB", gp_face2)
 
 // Default speed and move values
+last_direction = direction
 speed_value = 10
 move_u = 0
 move_d = 0
@@ -84,21 +85,9 @@ grabbing = false
             <string>/// Do things
 
 // If we're carrying anything, move it with us
-if(obj_in_mouth != noone) {
-    obj_in_mouth.y = y
-    switch(sprite_index) {
-        case dog_right:
-            obj_in_mouth.x = x + lengthdir_x(sprite_width / 2, direction)
-            break
-        case dog_left:
-            obj_in_mouth.x = x + lengthdir_x(sprite_width / 2, direction)
-            break
-        default:
-            obj_in_mouth.x = x
-            break
-    }
+if(speed != 0){
+    orient_obj_in_mouth()
 }
-
 // If we are charging up a bark, track that
 if(charging_bark) {
     charge_time = current_time - bark_charge_begin
