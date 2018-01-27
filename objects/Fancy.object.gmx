@@ -85,9 +85,9 @@ grabbing = false
             <string>/// Do things
 
 // If we're carrying anything, move it with us
-if(speed != 0){
+//if(speed != 0){
     orient_obj_in_mouth()
-}
+//}
 // If we are charging up a bark, track that
 if(charging_bark) {
     charge_time = current_time - bark_charge_begin
