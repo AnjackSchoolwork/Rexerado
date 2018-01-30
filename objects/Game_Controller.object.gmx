@@ -75,6 +75,10 @@ if(room_get_name(room) == room_get_name(Test_Level)) {
         }
     }
 }
+
+with(all) {
+    depth = -y - (sprite_height / 2)
+}
 </string>
           </argument>
         </arguments>

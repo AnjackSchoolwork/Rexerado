@@ -95,6 +95,7 @@
       <object>objects\cat_base</object>
       <object>objects\cat_standard</object>
     </objects>
+    <object>objects\bone_base</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>
@@ -104,7 +105,7 @@
     <room>rooms\Instructions</room>
   </rooms>
   <constants number="1">
-    <constant name="DEBUG">true</constant>
+    <constant name="DEBUG">false</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

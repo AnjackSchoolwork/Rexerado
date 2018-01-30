@@ -62,19 +62,21 @@ speed_value = 5
             <kind>1</kind>
             <string>/// Look for cats to capture
 
+dist_to_home = point_distance(x, y, home_x, home_y)
+
 if(obj_in_mouth == noone) {
     if(target_object == noone) {
-        results = get_objects_in_circle(x + lengthdir_x(sprite_width/2, direction), y, 100)
+        results = get_objects_in_circle(mouth_x, mouth_y, 200)
         
         for(index = 0; index &lt; ds_list_size(results); index++) {
-            if(object_is_ancestor(results[| index].object_index, cat_base)) {
+            if(object_is_ancestor(results[| index].object_index, cat_base) || object_is_ancestor(results[| index].object_index, bone_base)) {
                 target_object = results[| index]
                 move_towards_point(target_object.x, target_object.y, speed_value)
             }
         }
     }
     else {
-        if (point_distance(mouth_x, mouth_y, target_object.x, target_object.y) &lt;= 10) {
+        if (point_distance(x, y, target_object.x, target_object.y) &lt;= sprite_width/2) {
             obj_in_mouth = target_object
         }
         else {
@@ -82,18 +84,27 @@ if(obj_in_mouth == noone) {
         }
     }
 }
-else {
+else if(dist_to_home &gt; sprite_width/2) {
+    // reorient image
+    if(direction &lt; 271 &amp;&amp; direction &gt; 90) {
+        image_index = placeholder_1
+    }
+    else {
+        image_index = placeholder_1_5
+    }
+    
+    move_towards_point(home_x, home_y, speed_value)
+    
     if(object_is_ancestor(obj_in_mouth.object_index, cat_base)) {
         obj_in_mouth.state_current = "captured"
     }
     orient_obj_in_mouth(placeholder_1, placeholder_1_5)
+}
+else {
     
-    if(distance_to_point(home_x, home_y) &gt; 10) {
-        move_towards_point(home_x, home_y, speed_value)
-    }
-    else if (speed &gt; 0) {
-        speed = 0
-    }
+    instance_destroy(obj_in_mouth)
+    
+    instance_destroy()
 }
 </string>
           </argument>
