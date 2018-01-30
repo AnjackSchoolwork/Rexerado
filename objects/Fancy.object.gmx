@@ -60,6 +60,14 @@ max_bark_radius = 180
 // Held objects
 obj_in_mouth = noone
 grabbing = false
+
+// Sprites
+sprite_list = ds_map_create()
+
+ds_map_add(sprite_list, "rear", dog_rear)
+ds_map_add(sprite_list, "front", dog_face)
+ds_map_add(sprite_list, "left", dog_left)
+ds_map_add(sprite_list, "right", dog_right)
 </string>
           </argument>
         </arguments>
@@ -132,16 +140,16 @@ draw_sprite(sprite_index, image_index, x, y)
 
 if(speed &gt; 0){
     if((0 &lt;= direction and direction &lt; 45) or (360 &gt;= direction and direction &gt; 315)) {
-        sprite_index = dog_right
+        sprite_index = sprite_list[? "right"]
     }
     else if(45 &lt;= direction and direction &lt; 135) {
-        sprite_index = dog_rear
+        sprite_index = sprite_list[? "rear"]
     }
     else if(135 &lt;= direction and direction &lt; 225) {
-        sprite_index = dog_left
+        sprite_index = sprite_list[? "left"]
     }
     else {
-        sprite_index = dog_face
+        sprite_index = sprite_list[? "front"]
     }
 }
 

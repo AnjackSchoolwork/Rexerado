@@ -98,7 +98,7 @@
     <instance objName="cat_standard" x="608" y="448" name="inst_6D27F4FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bush" x="1408" y="928" name="inst_6F3AFB6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bush" x="672" y="1536" name="inst_10CEAF20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bandit" x="896" y="1440" name="inst_F167755C" locked="0" code="direction = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="bandit" x="768" y="1504" name="inst_F167755C" locked="0" code="direction = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bone_base" x="992" y="704" name="inst_9DB70880" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

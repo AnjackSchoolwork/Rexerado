@@ -110,10 +110,11 @@ else // Check the keyboard
         if(obj_in_mouth != noone) {
             grabbing = true
             // Spit it out!
-            obj_in_mouth.direction = last_direction
+            obj_in_mouth.direction = direction
             obj_in_mouth.speed = 10
-            obj_in_mouth.x = x + 10 + lengthdir_x((sprite_width/2) + 10, direction)
-            obj_in_mouth.depth = depth + 1
+            // Why were these lines even here? What was I trying to do?!
+            //obj_in_mouth.x = x + 10 + lengthdir_x((sprite_width/2) + 10, direction)
+            //obj_in_mouth.depth = depth + 1
             obj_in_mouth = noone
         }
         else {

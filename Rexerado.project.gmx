@@ -18,6 +18,10 @@
       <sprite>sprites\cat_sit_horiz</sprite>
       <sprite>sprites\cat_sit_vert_face</sprite>
       <sprite>sprites\cat_sit_vert_back</sprite>
+      <sprite>sprites\sassy_walk_away</sprite>
+      <sprite>sprites\sassy_walk_right</sprite>
+      <sprite>sprites\sassy_walk_left</sprite>
+      <sprite>sprites\sassy_walk_toward</sprite>
     </sprites>
     <sprites name="dog">
       <sprite>sprites\dog_face</sprite>
@@ -105,7 +109,7 @@
     <room>rooms\Instructions</room>
   </rooms>
   <constants number="1">
-    <constant name="DEBUG">false</constant>
+    <constant name="DEBUG">true</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
