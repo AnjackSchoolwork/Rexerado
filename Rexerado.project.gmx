@@ -28,6 +28,7 @@
     <sprite>sprites\pre_pickle</sprite>
     <sprites name="Placeholders">
       <sprite>sprites\placeholder_1</sprite>
+      <sprite>sprites\placeholder_1_5</sprite>
       <sprite>sprites\placeholder_2</sprite>
       <sprite>sprites\placeholder_3</sprite>
       <sprite>sprites\Gate</sprite>
@@ -60,6 +61,7 @@
     <script>scripts\enter_state_play.gml</script>
     <script>scripts\do_input_actions.gml</script>
     <script>scripts\orient_obj_in_mouth.gml</script>
+    <script>scripts\state_captured.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_menu</font>
@@ -68,7 +70,6 @@
   <objects name="objects">
     <object>objects\UI_Controller</object>
     <object>objects\Fancy</object>
-    <object>objects\cat_base</object>
     <objects name="Distractions">
       <object>objects\distraction_base</object>
       <object>objects\ball</object>
@@ -90,6 +91,10 @@
     </objects>
     <object>objects\bandit</object>
     <object>objects\mobile_object_base</object>
+    <objects name="cats">
+      <object>objects\cat_base</object>
+      <object>objects\cat_standard</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>

@@ -52,7 +52,7 @@ if(is_gamepad) {
                 if(object_is_ancestor(local_pickups[| index].object_index, pick_up_base)) {
                     obj_in_mouth = local_pickups[| index]
                     obj_in_mouth.depth = depth - 1
-                    orient_obj_in_mouth()
+                    orient_obj_in_mouth(dog_left, dog_right)
                     break
                 }
             }
@@ -133,7 +133,7 @@ else // Check the keyboard
                     obj_in_mouth = local_pickups[| index]
                     grabbing = true
                     obj_in_mouth.depth = depth - 1
-                    orient_obj_in_mouth()
+                    orient_obj_in_mouth(dog_left, dog_right)
                     break
                 }
             }
@@ -146,12 +146,9 @@ else // Check the keyboard
     move_v = move_u + move_d
     move_h = move_l + move_r
     
-    v_value = speed_value * move_v
-    h_value = speed_value * move_h
-    
-    vector_len = sqrt(sqr(v_value) + sqr(h_value))
+    vector_len = sqrt(sqr(move_v) + sqr(move_h))
     speed = vector_len * speed_value
     if(speed > 0) {
-        direction = point_direction(x, y, x + h_value, y + v_value)
+        direction = point_direction(x, y, x + speed_value * move_h, y + speed_value * move_v)
     }
 }

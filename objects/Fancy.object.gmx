@@ -86,7 +86,7 @@ grabbing = false
 
 // If we're carrying anything, move it with us
 //if(speed != 0){
-    orient_obj_in_mouth()
+    orient_obj_in_mouth(dog_left, dog_right)
 //}
 // If we are charging up a bark, track that
 if(charging_bark) {

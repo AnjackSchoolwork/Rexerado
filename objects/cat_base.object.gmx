@@ -50,6 +50,7 @@ ds_map_add(state, "wandering", state_wander)
 ds_map_add(state, "napping", state_nap)
 ds_map_add(state, "motivated", state_motivated)
 ds_map_add(state, "playing", state_play)
+ds_map_add(state, "captured", state_captured)
 
 state_vars = ds_map_create()
 

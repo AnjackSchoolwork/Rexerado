@@ -5,9 +5,96 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>mobile_base</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Initialize variables
+
+mouth_x = x
+mouth_y = y
+
+obj_in_mouth = noone
+
+target_object = noone
+
+home_x = x
+home_y = y
+
+speed_value = 5
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Look for cats to capture
+
+if(obj_in_mouth == noone) {
+    if(target_object == noone) {
+        results = get_objects_in_circle(x + lengthdir_x(sprite_width/2, direction), y, 100)
+        
+        for(index = 0; index &lt; ds_list_size(results); index++) {
+            if(object_is_ancestor(results[| index].object_index, cat_base)) {
+                target_object = results[| index]
+                move_towards_point(target_object.x, target_object.y, speed_value)
+            }
+        }
+    }
+    else {
+        if (distance_to_object(target_object) &gt; sprite_width / 2) {
+            
+        }
+        else {
+            obj_in_mouth = target_object
+        }
+    }
+}
+else {
+    if(object_is_ancestor(obj_in_mouth.object_index, cat_base)) {
+        obj_in_mouth.state_current = "captured"
+    }
+    orient_obj_in_mouth(placeholder_1, placeholder_1_5)
+    move_towards_point(home_x, home_y, speed_value)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
