@@ -7,9 +7,9 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>53</bbox_left>
-  <bbox_right>136</bbox_right>
-  <bbox_top>6</bbox_top>
+  <bbox_left>20</bbox_left>
+  <bbox_right>134</bbox_right>
+  <bbox_top>9</bbox_top>
   <bbox_bottom>188</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -20,7 +20,6 @@
   <width>190</width>
   <height>190</height>
   <frames>
-    <frame index="0">images\sassy_walk_toward_0.png</frame>
-    <frame index="1">images\sassy_walk_toward_1.png</frame>
+    <frame index="0">images\sassy_sit_front_0.png</frame>
   </frames>
 </sprite>

@@ -38,6 +38,14 @@ home_x = x
 home_y = y
 
 speed_value = 5
+
+// Sprites
+sprite_list = ds_map_create()
+
+ds_map_add(sprite_list, "run_left", placeholder_1)
+ds_map_add(sprite_list, "sit_left", placeholder_1)
+ds_map_add(sprite_list, "run_right", placeholder_1_5)
+ds_map_add(sprite_list, "sit_right", placeholder_1_5)
 </string>
           </argument>
         </arguments>

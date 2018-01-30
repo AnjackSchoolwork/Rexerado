@@ -15,19 +15,24 @@
       <sprite>sprites\spr_btn_info</sprite>
     </sprites>
     <sprites name="cat">
-      <sprite>sprites\cat_sit_horiz</sprite>
-      <sprite>sprites\cat_sit_vert_face</sprite>
-      <sprite>sprites\cat_sit_vert_back</sprite>
+      <sprite>sprites\sassy_sit_right</sprite>
       <sprite>sprites\sassy_walk_away</sprite>
       <sprite>sprites\sassy_walk_right</sprite>
       <sprite>sprites\sassy_walk_left</sprite>
       <sprite>sprites\sassy_walk_toward</sprite>
+      <sprite>sprites\sassy_sit_left</sprite>
+      <sprite>sprites\sassy_sit_front</sprite>
+      <sprite>sprites\sassy_sit_rear</sprite>
     </sprites>
     <sprites name="dog">
-      <sprite>sprites\dog_face</sprite>
-      <sprite>sprites\dog_right</sprite>
-      <sprite>sprites\dog_rear</sprite>
-      <sprite>sprites\dog_left</sprite>
+      <sprite>sprites\Fancy_run_left</sprite>
+      <sprite>sprites\Fancy_run_right</sprite>
+      <sprite>sprites\Fancy_stand_rear</sprite>
+      <sprite>sprites\Fancy_stand_right</sprite>
+      <sprite>sprites\Fancy_stand_left</sprite>
+      <sprite>sprites\Fancy_stand_front</sprite>
+      <sprite>sprites\Fancy_run_rear</sprite>
+      <sprite>sprites\Fancy_run_front</sprite>
     </sprites>
     <sprite>sprites\pre_pickle</sprite>
     <sprites name="Placeholders">
