@@ -82,6 +82,7 @@
       <sprite>sprites\spr_yarn_purple</sprite>
       <sprite>sprites\spr_bone</sprite>
     </sprites>
+    <sprite>sprites\corral_gate</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_dirt</background>
