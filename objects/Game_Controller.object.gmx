@@ -29,7 +29,10 @@
 
 roaming_cats = 0
 corralled_cats = 0
-corralled_cats_min = 3
+
+corralled_cats_min = 0
+
+
 level_complete = false
 </string>
           </argument>
@@ -110,6 +113,16 @@ if(room == Level_One or room == Level_Two or room == Level_Three) {
           <argument>
             <kind>1</kind>
             <string>roaming_cats = instance_number(cat_base)
+
+if(room == Level_One) {
+    corralled_cats_min = 3
+}
+else if (room == Level_Two) {
+    corralled_cats_min = 5
+}
+else if (room == Level_Three) {
+    corralled_cats_min = 7
+}
 </string>
           </argument>
         </arguments>
