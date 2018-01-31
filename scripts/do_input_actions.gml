@@ -52,7 +52,7 @@ if(is_gamepad) {
                 if(object_is_ancestor(local_pickups[| index].object_index, pick_up_base)) {
                     obj_in_mouth = local_pickups[| index]
                     obj_in_mouth.depth = depth - 1
-                    orient_obj_in_mouth(dog_left, dog_right)
+                    orient_obj_in_mouth()
                     break
                 }
             }
@@ -134,7 +134,7 @@ else // Check the keyboard
                     obj_in_mouth = local_pickups[| index]
                     grabbing = true
                     obj_in_mouth.depth = depth - 1
-                    orient_obj_in_mouth(dog_left, dog_right)
+                    orient_obj_in_mouth()
                     break
                 }
             }

@@ -73,7 +73,7 @@ ds_map_add(sprite_list, "run_front", Fancy_run_front)
 ds_map_add(sprite_list, "run_left", Fancy_run_left)
 ds_map_add(sprite_list, "run_right", Fancy_run_right)
 
-
+image_speed = 0.3
 </string>
           </argument>
         </arguments>

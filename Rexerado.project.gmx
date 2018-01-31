@@ -49,6 +49,8 @@
       <sprite>sprites\spr_grass</sprite>
       <sprite>sprites\spr_dirt_s</sprite>
       <sprite>sprites\spr_dirt</sprite>
+      <sprite>sprites\spr_grass_flower_purple</sprite>
+      <sprite>sprites\spr_grass_flower_yellow</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -97,6 +99,8 @@
     <objects name="Scenery">
       <object>objects\obj_bush</object>
       <object>objects\obj_grass</object>
+      <object>objects\obj_flower_purple</object>
+      <object>objects\obj_flower_yellow</object>
     </objects>
     <object>objects\bandit</object>
     <object>objects\mobile_object_base</object>

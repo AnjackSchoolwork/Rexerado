@@ -70,7 +70,7 @@ ds_map_add(sprite_list, "sit_front", sassy_sit_front)
 ds_map_add(sprite_list, "sit_left", sassy_sit_left)
 ds_map_add(sprite_list, "sit_right", sassy_sit_right)
 
-image_speed = 3
+image_speed = 0.3
 </string>
           </argument>
         </arguments>
