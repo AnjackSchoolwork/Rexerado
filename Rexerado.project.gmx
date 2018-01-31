@@ -92,6 +92,7 @@
       <sprite>sprites\spr_yarn_green</sprite>
       <sprite>sprites\spr_yarn_purple</sprite>
       <sprite>sprites\spr_bone</sprite>
+      <sprite>sprites\spr_catnip</sprite>
     </sprites>
     <sprite>sprites\corral_gate</sprite>
     <sprites name="Terrain">
@@ -157,6 +158,7 @@
       <object>objects\ball_yarn_purple</object>
       <object>objects\ball_yarn_green</object>
       <object>objects\bone_base</object>
+      <object>objects\obj_catnip</object>
     </objects>
     <object>objects\collection_point</object>
     <objects name="btns">

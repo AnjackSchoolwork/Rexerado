@@ -80,9 +80,11 @@ if(room == Level_One or room == Level_Two or room == Level_Three) {
     }
 }
 
-with(all) {
-    if(!object_is_ancestor(self.object_index, UI_component)){
-        depth = -y - (sprite_height / 2)
+if(room == Level_One or room == Level_Two or room == Level_Three) {
+    with(all) {
+        if(!object_is_ancestor(self.object_index, UI_component) and Fancy.obj_in_mouth != self){
+            depth = -y - (sprite_height / 2)
+        }
     }
 }
 </string>

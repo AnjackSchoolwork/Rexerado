@@ -109,9 +109,10 @@
     <instance objName="cat_codgey" x="480" y="288" name="inst_129EEBEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cat_codgey" x="192" y="864" name="inst_59D6DF0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cat_codgey" x="736" y="544" name="inst_507159DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ball_yarn_blue" x="416" y="480" name="inst_499591C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ball_yarn_purple" x="544" y="544" name="inst_D887B82F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ball_yarn_blue" x="864" y="832" name="inst_499591C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ball_yarn_purple" x="1184" y="608" name="inst_D887B82F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ball_base" x="800" y="320" name="inst_F27FBD2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_catnip" x="480" y="448" name="inst_83B8FDBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
