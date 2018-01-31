@@ -78,7 +78,7 @@ cat_count++
 
 // Check for win condition
 if(Game_Controller.level_complete) {
-    room_goto(End_Game)
+    room_goto(room_next(room))
 }
 </string>
           </argument>

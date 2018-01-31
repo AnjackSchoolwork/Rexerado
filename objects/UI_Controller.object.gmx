@@ -144,6 +144,7 @@ switch(room_get_name(room)) {
             <string>/// Some other keyboard controls
 
 if(keyboard_check(vk_escape)) {
+    audio_play_sound(whip, 1, false)
     if(room == Main_Menu) {
         game_end()
     }
@@ -153,25 +154,35 @@ if(keyboard_check(vk_escape)) {
 }
 else if(keyboard_check(ord('P'))){
    if(room_exists(room_previous(room))) {
+        audio_play_sound(whip, 1, false)
         room = room_previous(room)
    }
 }
 else if (keyboard_check(ord('N'))) {
     if(room_exists(room_next(room))) {
+        audio_play_sound(whip, 1, false)
         room = room_next(room)
     }
 }
 else if(room == End_Game) {
+    audio_play_sound(whip, 1, false)
     room = Credits_Screen
 }
 else if (room == Credits_Screen) {
+    audio_play_sound(whip, 1, false)
     game_restart()
 }
 else if (room == Instructions) {
+    audio_play_sound(whip, 1, false)
+    room = Controls
+}
+else if (room == Controls) {
+    audio_play_sound(whip, 1, false)
     room = Credits_Screen
 }
 else {
     if(keyboard_check(ord("R"))) {
+        audio_play_sound(whip, 1, false)
         room_restart()
     }
 }

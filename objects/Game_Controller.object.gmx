@@ -59,7 +59,7 @@ level_complete = false
 roaming_cats = instance_number(cat_base)
 
 // If we're in the test level
-if(room_get_name(room) == room_get_name(Test_Level)) {
+if(room == Level_One or room == Level_Two or room == Level_Three) {
     
     // Check if we've completed level tasks
     if(collection_point.cat_count &gt;= corralled_cats_min) {
@@ -71,6 +71,7 @@ if(room_get_name(room) == room_get_name(Test_Level)) {
         if(level_complete) {
         
             // You win!
+            
         
         }
         else {    

@@ -189,13 +189,17 @@
       <object>objects\level_time</object>
     </objects>
     <object>objects\credits</object>
+    <object>objects\sound_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>
-    <room>rooms\Test_Level</room>
+    <room>rooms\Level_One</room>
+    <room>rooms\Level_Two</room>
+    <room>rooms\Level_Three</room>
     <room>rooms\End_Game</room>
     <room>rooms\Credits_Screen</room>
     <room>rooms\Instructions</room>
+    <room>rooms\Controls</room>
   </rooms>
   <constants number="1">
     <constant name="DEBUG">false</constant>
