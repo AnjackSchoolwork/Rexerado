@@ -127,6 +127,7 @@
     <background>background\mms_splash</background>
     <background>background\bg_cast</background>
     <background>background\bg_controls</background>
+    <background>background\level_transition</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -200,7 +201,9 @@
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>
     <room>rooms\Level_One</room>
+    <room>rooms\lvl_transition_one</room>
     <room>rooms\Level_Two</room>
+    <room>rooms\lvl_transition_two</room>
     <room>rooms\Level_Three</room>
     <room>rooms\End_Game</room>
     <room>rooms\Credits_Screen</room>

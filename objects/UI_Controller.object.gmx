@@ -199,6 +199,10 @@ else if (room == Controls) {
     audio_play_sound(whip, 1, false)
     room = Credits_Screen
 }
+else if (room == lvl_transition_one or room == lvl_transition_two) {
+    audio_play_sound(whip, 1, false)
+    room_goto(room_next(room))
+}
 else {
     if(keyboard_check(ord("R"))) {
         audio_play_sound(whip, 1, false)
