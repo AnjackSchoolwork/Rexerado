@@ -187,11 +187,13 @@
       <object>objects\UI_Controller</object>
       <object>objects\cat_meter</object>
       <object>objects\fancy_power</object>
-      <object>objects\score</object>
+      <object>objects\obj_score</object>
       <object>objects\level_time</object>
+      <object>objects\UI_component</object>
     </objects>
     <object>objects\credits</object>
     <object>objects\sound_controller</object>
+    <object>objects\obj_blockingVolume</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>

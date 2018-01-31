@@ -8,17 +8,17 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>599</bbox_right>
+  <bbox_right>299</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>224</bbox_bottom>
+  <bbox_bottom>111</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>600</width>
-  <height>225</height>
+  <width>300</width>
+  <height>112</height>
   <frames>
     <frame index="0">images\ui_score_0.png</frame>
   </frames>
