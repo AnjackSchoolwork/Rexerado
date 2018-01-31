@@ -102,12 +102,7 @@ switch(room_get_name(room)) {
         draw_text(view_xview[view_current] + view_wview[view_current] / 2, view_yview[view_current] + view_hview[view_current] / 2 + 36, "You " + result_text)
         draw_text(view_xview[view_current] + view_wview[view_current] / 2, view_yview[view_current] + view_hview[view_current] - 36, "Press (nearly) any key to continue.")
         break
-    case "Credits":
-        draw_set_color(c_white)
-        draw_set_font(fnt_menu)
-        draw_set_halign(fa_center)
-        draw_set_valign(fa_middle)
-        draw_text(view_xview[view_current] + view_wview[view_current] / 2, view_yview[view_current] + view_hview[view_current] / 2, "Credits go here.")
+    case "Credits_Screen":
         break
     case "Instructions":
         draw_sprite(spr_Instructions, -1, 0, 0)
@@ -167,13 +162,13 @@ else if (keyboard_check(ord('N'))) {
     }
 }
 else if(room == End_Game) {
-    room = Credits
+    room = Credits_Screen
 }
-else if (room == Credits) {
+else if (room == Credits_Screen) {
     game_restart()
 }
 else if (room == Instructions) {
-    room = Credits
+    room = Credits_Screen
 }
 else {
     if(keyboard_check(ord("R"))) {

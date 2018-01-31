@@ -7,6 +7,17 @@
   <sounds name="sound">
     <sound>sound\snd_growl</sound>
     <sound>sound\snd_bark</sound>
+    <sound>sound\bg_music</sound>
+    <sound>sound\cat_got</sound>
+    <sound>sound\howling</sound>
+    <sound>sound\indignant_cat</sound>
+    <sound>sound\main_menu_riff</sound>
+    <sound>sound\meow_1</sound>
+    <sound>sound\meow_2</sound>
+    <sound>sound\meow_3</sound>
+    <sound>sound\narration</sound>
+    <sound>sound\codgey_meow</sound>
+    <sound>sound\whip</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="btns">
@@ -104,14 +115,15 @@
       <sprite>sprites\ui_fancy_power</sprite>
       <sprite>sprites\ui_score</sprite>
       <sprite>sprites\ui_level_time</sprite>
+      <sprite>sprites\spr_credits</sprite>
     </sprites>
-    <sprite>sprites\spr_credits</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_dirt</background>
     <background>background\bkgrnd_dirt_s</background>
     <background>background\background3</background>
     <background>background\background4</background>
+    <background>background\mms_splash</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
