@@ -7,7 +7,7 @@ state_vars = undefined
 
 state_vars = ds_map_create()
 
-if(irandom_range(0, 100) % 3 == 0) {
+if(irandom_range(0, 100) % 30 == 0) {
     audio_play_sound(indignant_cat, 1, false)
 }
 ds_map_add(state_vars, "motivation_source", motivation_source)

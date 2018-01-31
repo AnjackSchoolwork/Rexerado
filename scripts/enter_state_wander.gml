@@ -5,7 +5,7 @@ state_vars = undefined
 
 state_vars = ds_map_create()
 
-if(irandom_range(0, 100) % 3 == 0) {
+if(irandom_range(0, 100) % 33 == 0) {
     audio_play_sound(meow_2, 1, false)
 }
 

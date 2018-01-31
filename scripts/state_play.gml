@@ -2,6 +2,9 @@
 
 // can we still see the thing?
 if(can_see_thing(target_object, x + percept_offset_x, y + percept_offset_y, perception_rad)) {
+    if(irandom_range(0, 1000) % 500 == 0) {
+    audio_play_sound(meow_1, 1, false)
+}
     // check to see it we're at the ball
     if(!place_meeting(x, y, target_object.object_index)) {
         move_towards_point(target_object.x, target_object.y, speed_value)
