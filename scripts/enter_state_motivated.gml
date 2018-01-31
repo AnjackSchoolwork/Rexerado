@@ -7,6 +7,8 @@ state_vars = undefined
 
 state_vars = ds_map_create()
 
+audio_play_sound(indignant_cat, 1, false)
+
 ds_map_add(state_vars, "motivation_source", motivation_source)
 ds_map_add(state_vars, "new_direction", point_direction(motivation_source.x, motivation_source.y, x, y))
 
