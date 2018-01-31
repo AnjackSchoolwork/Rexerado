@@ -197,6 +197,22 @@
     <object>objects\credits</object>
     <object>objects\sound_controller</object>
     <object>objects\obj_blockingVolume</object>
+    <objects name="Terrain">
+      <object>objects\obj_bv_1</object>
+      <object>objects\obj_bv_2</object>
+      <object>objects\obj_bv_3</object>
+      <object>objects\obj_bv_4</object>
+      <object>objects\obj_bv_5</object>
+      <object>objects\obj_bv_6</object>
+      <object>objects\obj_bv_7</object>
+      <object>objects\obj_bv_8</object>
+      <object>objects\obj_bv_9</object>
+      <object>objects\obj_bv_10</object>
+      <object>objects\obj_bv_11</object>
+      <object>objects\obj_bv_12</object>
+      <object>objects\obj_bv_13</object>
+      <object>objects\obj_bv_14</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>
