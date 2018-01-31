@@ -136,16 +136,7 @@ switch(room_get_name(room)) {
     case "Controls":
         break
     default:
-        draw_set_halign(fa_left)
-        draw_set_valign(fa_top)
-        draw_set_color(c_green)
-        draw_set_font(fnt_UI)
-        
-        draw_text(view_xview[view_current] + 10, view_yview[view_current] + 10, "Roam'n Cats: " + string(Game_Controller.roaming_cats))
-        draw_text(view_xview[view_current] + 10, view_yview[view_current] + 30, "Corralled Cats: " + string(collection_point.cat_count))
-        draw_text(view_xview[view_current] + 10, view_yview[view_current] + 50, "Level Complete: " + string(Game_Controller.level_complete))
-        
-        draw_set_color(c_black)
+        break
 }
 </string>
           </argument>

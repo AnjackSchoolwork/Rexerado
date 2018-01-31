@@ -30,7 +30,23 @@ draw_sprite(ui_cat_meter, 0, view_xview[view_current], view_yview[view_current])
 
 draw_set_color(c_white)
 draw_set_font(fnt_UI)
-draw_text(view_xview[view_current] + sprite_width - 20, view_yview[view_current] + 20, Game_Controller.roaming_cats)
+draw_text(view_xview[view_current] + sprite_width - 40, view_yview[view_current] + 50, collection_point.cat_count)
+switch(room) {
+    case Level_One:
+        quota = 3
+        break
+    case Level_Two:
+        quota = 5
+        break
+    case Level_Three:
+        quota = 7
+        break
+    default:
+        quota = 0
+        break
+}
+
+draw_text(view_xview[view_current] + sprite_width - 40, view_yview[view_current] + 100, quota)
 </string>
           </argument>
         </arguments>

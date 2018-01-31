@@ -25,10 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-draw_sprite(ui_score, 0, view_xview[view_current] + view_wview[view_current] - sprite_width, view_yview[view_current])
+            <string>new_x = view_xview[view_current] + view_wview[view_current] - sprite_width
+new_y = view_yview[view_current]
 
+draw_sprite(ui_score, 0, new_x, new_y)
 
+draw_set_color(c_white)
+draw_set_font(fnt_UI)
+draw_text(new_x + sprite_width - 80, new_y + 55, score)
 </string>
           </argument>
         </arguments>
