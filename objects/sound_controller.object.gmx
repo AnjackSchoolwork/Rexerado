@@ -27,8 +27,9 @@
             <kind>1</kind>
             <string>// Stop playing sound
 
-if(!audio_is_playing(whip)) {
+if(audio_is_playing(whip)) {
     audio_stop_all()
+    audio_play_sound(whip, 1, false)
 }
 </string>
           </argument>

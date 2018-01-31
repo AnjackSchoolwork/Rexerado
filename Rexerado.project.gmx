@@ -124,6 +124,8 @@
     <background>background\background3</background>
     <background>background\background4</background>
     <background>background\mms_splash</background>
+    <background>background\bg_cast</background>
+    <background>background\bg_controls</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

@@ -105,7 +105,8 @@ switch(room_get_name(room)) {
     case "Credits_Screen":
         break
     case "Instructions":
-        draw_sprite(spr_Instructions, -1, 0, 0)
+        break
+    case "Controls":
         break
     default:
         draw_set_halign(fa_left)
