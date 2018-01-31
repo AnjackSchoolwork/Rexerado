@@ -15,9 +15,9 @@ if(obj_in_mouth != noone) {
     }
     
     if(sprite_index == sprite_list[? "sit_front"] or sprite_index == sprite_list[? "run_front"]) {
-        obj_in_mouth.depth = depth - 1
+        obj_in_mouth.depth = depth - 100
     }
     else {
-        obj_in_mouth.depth = depth + 1
+        obj_in_mouth.depth = depth + 100
     }
 }
