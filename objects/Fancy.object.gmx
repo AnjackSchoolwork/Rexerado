@@ -36,9 +36,9 @@ ds_map_add(keys, "UP", ord('W'))
 ds_map_add(keys, "DOWN", ord('S'))
 ds_map_add(keys, "LEFT", ord('A'))
 ds_map_add(keys, "RIGHT", ord('D'))
-ds_map_add(keys, "BARK", vk_rshift)
+ds_map_add(keys, "BARK", vk_space)
 ds_map_add(buttons, "BARK", gp_face1)
-ds_map_add(keys, "GRAB", vk_space)
+ds_map_add(keys, "GRAB", vk_rshift)
 ds_map_add(buttons, "GRAB", gp_face2)
 
 // Default speed and move values

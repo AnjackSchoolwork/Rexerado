@@ -37,7 +37,7 @@ target_object = noone
 home_x = x
 home_y = y
 
-speed_value = 20
+speed_value = 15
 
 // Sprites
 sprite_list = ds_map_create()
@@ -89,13 +89,19 @@ dist_to_home = point_distance(x, y, home_x, home_y)
 
 if(obj_in_mouth == noone) {
     if(target_object == noone) {
-        results = get_objects_in_circle(mouth_x, mouth_y, 250)
-        
-        for(index = 0; index &lt; ds_list_size(results); index++) {
-            result = results[| index]
-            if(object_is_ancestor(result.object_index, cat_base) || (result.object_index == bone_base &amp;&amp; Fancy.obj_in_mouth != result)) {
-                target_object = result
-                move_towards_point(target_object.x, target_object.y, speed_value)
+        if(dist_to_home &gt; sprite_width/2) {
+            move_towards_point(home_x, home_y, speed_value / 2)
+        }
+        else {
+            speed = 0
+            results = get_objects_in_circle(mouth_x, mouth_y, 250)
+            
+            for(index = 0; index &lt; ds_list_size(results); index++) {
+                result = results[| index]
+                if(object_is_ancestor(result.object_index, cat_base) || (result.object_index == bone_base &amp;&amp; Fancy.obj_in_mouth != result)) {
+                    target_object = result
+                    move_towards_point(target_object.x, target_object.y, speed_value)
+                }
             }
         }
     }
@@ -119,9 +125,6 @@ else if(dist_to_home &gt; sprite_width/2) {
     orient_obj_in_mouth(placeholder_1, placeholder_1_5)
 }
 else {
-
-    // Remove from roam'n cats
-    Game_Controller.roaming_cats -= 1
 
     instance_destroy(obj_in_mouth)
     

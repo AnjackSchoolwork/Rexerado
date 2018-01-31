@@ -52,7 +52,6 @@ cat_count = 0
             <kind>1</kind>
             <string>instance_destroy(other)
 cat_count++
-Game_Controller.roaming_cats--
 </string>
           </argument>
         </arguments>

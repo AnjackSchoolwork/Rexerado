@@ -118,7 +118,7 @@
     <room>rooms\Instructions</room>
   </rooms>
   <constants number="1">
-    <constant name="DEBUG">true</constant>
+    <constant name="DEBUG">false</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

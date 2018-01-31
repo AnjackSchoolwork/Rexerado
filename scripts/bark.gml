@@ -19,3 +19,8 @@ with(cat_base) {
     }
     
 }
+
+with(bandit) {
+    target_object = noone
+    obj_in_mouth = noone
+}

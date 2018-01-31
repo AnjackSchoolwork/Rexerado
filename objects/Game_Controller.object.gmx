@@ -55,6 +55,9 @@ level_complete = false
             <kind>1</kind>
             <string>/// Execute checks
 
+// How many cats are left
+roaming_cats = instance_number(cat_base)
+
 // If we're in the test level
 if(room_get_name(room) == room_get_name(Test_Level)) {
     
