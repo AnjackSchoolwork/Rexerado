@@ -98,7 +98,7 @@ if(obj_in_mouth == noone) {
             
             for(index = 0; index &lt; ds_list_size(results); index++) {
                 result = results[| index]
-                if(object_is_ancestor(result.object_index, cat_base) || (result.object_index == bone_base &amp;&amp; Fancy.obj_in_mouth != result)) {
+                if(object_is_ancestor(result.object_index, cat_base) || (result.object_index == bone_base &amp;&amp; Fancy.obj_in_mouth != result) &amp;&amp; result.object_index != cat_codgey) {
                     target_object = result
                     move_towards_point(target_object.x, target_object.y, speed_value)
                 }

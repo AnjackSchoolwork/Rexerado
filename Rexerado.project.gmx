@@ -15,14 +15,36 @@
       <sprite>sprites\spr_btn_info</sprite>
     </sprites>
     <sprites name="cat">
-      <sprite>sprites\sassy_sit_right</sprite>
-      <sprite>sprites\sassy_walk_away</sprite>
-      <sprite>sprites\sassy_walk_right</sprite>
-      <sprite>sprites\sassy_walk_left</sprite>
-      <sprite>sprites\sassy_walk_toward</sprite>
-      <sprite>sprites\sassy_sit_left</sprite>
-      <sprite>sprites\sassy_sit_front</sprite>
-      <sprite>sprites\sassy_sit_rear</sprite>
+      <sprites name="sassy">
+        <sprite>sprites\sassy_sit_rear</sprite>
+        <sprite>sprites\sassy_sit_front</sprite>
+        <sprite>sprites\sassy_sit_left</sprite>
+        <sprite>sprites\sassy_walk_toward</sprite>
+        <sprite>sprites\sassy_walk_left</sprite>
+        <sprite>sprites\sassy_walk_right</sprite>
+        <sprite>sprites\sassy_walk_away</sprite>
+        <sprite>sprites\sassy_sit_right</sprite>
+      </sprites>
+      <sprites name="kitty">
+        <sprite>sprites\kitty_sit_front</sprite>
+        <sprite>sprites\kitty_sit_left</sprite>
+        <sprite>sprites\kitty_sit_rear</sprite>
+        <sprite>sprites\kitty_walk_toward</sprite>
+        <sprite>sprites\kitty_walk_left</sprite>
+        <sprite>sprites\kitty_walk_right</sprite>
+        <sprite>sprites\kitty_walk_away</sprite>
+        <sprite>sprites\kitty_sit_right</sprite>
+      </sprites>
+      <sprites name="codgey">
+        <sprite>sprites\codgey_walk_away</sprite>
+        <sprite>sprites\codgey_sit_rear</sprite>
+        <sprite>sprites\codgey_sit_front</sprite>
+        <sprite>sprites\codgey_walk_toward</sprite>
+        <sprite>sprites\codgey_sit_left</sprite>
+        <sprite>sprites\codgey_walk_left</sprite>
+        <sprite>sprites\codgey_walk_right</sprite>
+        <sprite>sprites\codgey_sit_right</sprite>
+      </sprites>
     </sprites>
     <sprites name="dog">
       <sprite>sprites\Fancy_run_left</sprite>
@@ -56,6 +78,8 @@
   <backgrounds name="background">
     <background>background\bkgrnd_dirt</background>
     <background>background\bkgrnd_dirt_s</background>
+    <background>background\background3</background>
+    <background>background\background4</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -106,7 +130,9 @@
     <object>objects\mobile_object_base</object>
     <objects name="cats">
       <object>objects\cat_base</object>
-      <object>objects\cat_standard</object>
+      <object>objects\cat_sassy</object>
+      <object>objects\cat_codgey</object>
+      <object>objects\cat_kitty</object>
     </objects>
     <object>objects\bone_base</object>
   </objects>

@@ -61,15 +61,6 @@ enter_state_wander(self)
 //Sprites
 sprite_list = ds_map_create()
 
-ds_map_add(sprite_list, "run_rear", sassy_walk_away)
-ds_map_add(sprite_list, "run_front", sassy_walk_toward)
-ds_map_add(sprite_list, "run_left", sassy_walk_left)
-ds_map_add(sprite_list, "run_right", sassy_walk_right)
-ds_map_add(sprite_list, "sit_rear", sassy_sit_rear)
-ds_map_add(sprite_list, "sit_front", sassy_sit_front)
-ds_map_add(sprite_list, "sit_left", sassy_sit_left)
-ds_map_add(sprite_list, "sit_right", sassy_sit_right)
-
 image_speed = 0.3
 </string>
           </argument>
