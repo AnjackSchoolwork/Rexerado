@@ -103,12 +103,11 @@
     <instance objName="obj_bush" x="1696" y="960" name="inst_FA8191D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bandit" x="1696" y="896" name="inst_2C84B753" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bush" x="352" y="352" name="inst_8BC93ED1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bandit" x="384" y="288" name="inst_11FD71E7" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ball_yarn_blue" x="416" y="704" name="inst_1447573C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ball_yarn_purple" x="1216" y="1184" name="inst_647549EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cucumber" x="1184" y="864" name="inst_BF052105" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cucumber" x="608" y="1312" name="inst_CD60F06C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cucumber" x="480" y="576" name="inst_3A0DED8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cucumber" x="416" y="608" name="inst_3A0DED8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cucumber" x="1344" y="448" name="inst_D7F7EFFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cucumber" x="2816" y="576" name="inst_ED7095D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cucumber" x="2880" y="736" name="inst_F9CBFA1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -125,6 +124,8 @@
     <instance objName="barrier" x="768" y="1024" name="inst_9919A65F" locked="0" code="" scaleX="-12.2258062362671" scaleY="1.67741930484772" colour="4294967295" rotation="0"/>
     <instance objName="barrier" x="1088" y="1024" name="inst_F9F1C703" locked="0" code="" scaleX="8.5" scaleY="1.5" colour="4294967295" rotation="0"/>
     <instance objName="barrier" x="64" y="1120" name="inst_54864E55" locked="0" code="" scaleX="8.25" scaleY="6.4193549156189" colour="4294967295" rotation="0"/>
+    <instance objName="bandit" x="448" y="288" name="inst_ED474039" locked="0" code="direction = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_catnip" x="1024" y="1792" name="inst_9394898E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
