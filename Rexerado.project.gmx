@@ -74,6 +74,14 @@
       <sprite>sprites\spr_grass_flower_purple</sprite>
       <sprite>sprites\spr_grass_flower_yellow</sprite>
     </sprites>
+    <sprite>sprites\bandit_left</sprite>
+    <sprite>sprites\bandit_right</sprite>
+    <sprites name="Distractions">
+      <sprite>sprites\spr_yarn_blue</sprite>
+      <sprite>sprites\spr_yarn_green</sprite>
+      <sprite>sprites\spr_yarn_purple</sprite>
+      <sprite>sprites\spr_bone</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_dirt</background>
@@ -107,7 +115,11 @@
     <object>objects\Fancy</object>
     <objects name="Distractions">
       <object>objects\distraction_base</object>
-      <object>objects\ball</object>
+      <object>objects\ball_base</object>
+      <object>objects\ball_yarn_blue</object>
+      <object>objects\ball_yarn_purple</object>
+      <object>objects\ball_yarn_green</object>
+      <object>objects\bone_base</object>
     </objects>
     <object>objects\collection_point</object>
     <objects name="btns">
@@ -134,7 +146,6 @@
       <object>objects\cat_codgey</object>
       <object>objects\cat_kitty</object>
     </objects>
-    <object>objects\bone_base</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>

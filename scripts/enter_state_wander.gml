@@ -14,6 +14,6 @@ ds_map_add(state_vars, "wander_y", y)
 // Initialize tarry
 ds_map_add(state_vars, "tarry_rad", 30)
 ds_map_add(state_vars, "tarry_time", 1)
-ds_map_add(state_vars, "last_tarry_time", date_current_datetime())
+ds_map_add(state_vars, "max_tarry_time", 10)
 
 state_current = "wandering"
