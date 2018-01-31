@@ -37,7 +37,7 @@ target_object = noone
 home_x = x
 home_y = y
 
-speed_value = 5
+speed_value = 20
 
 // Sprites
 sprite_list = ds_map_create()
@@ -68,7 +68,7 @@ ds_map_add(sprite_list, "sit_right", placeholder_1_5)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///
+            <string>/// Search and Destroy
 
 // reorient image
 if(direction &lt; 271 &amp;&amp; direction &gt; 90) {
@@ -89,7 +89,7 @@ dist_to_home = point_distance(x, y, home_x, home_y)
 
 if(obj_in_mouth == noone) {
     if(target_object == noone) {
-        results = get_objects_in_circle(mouth_x, mouth_y, 200)
+        results = get_objects_in_circle(mouth_x, mouth_y, 250)
         
         for(index = 0; index &lt; ds_list_size(results); index++) {
             result = results[| index]

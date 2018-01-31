@@ -74,6 +74,10 @@ ds_map_add(sprite_list, "run_left", Fancy_run_left)
 ds_map_add(sprite_list, "run_right", Fancy_run_right)
 
 image_speed = 0.3
+
+mouth_x = x
+mouth_y = y
+mouth_offset = 0
 </string>
           </argument>
         </arguments>
@@ -97,6 +101,15 @@ image_speed = 0.3
           <argument>
             <kind>1</kind>
             <string>/// Do things
+
+mouth_x = x + (mouth_offset * ((sprite_width / 4) + 20))
+if(speed != 0) {
+    mouth_y = y
+    mouth_x += mouth_offset * 30
+}
+else {
+    mouth_y = y - sprite_height / 4 + 10
+}
 
 // If we're carrying anything, move it with us
 //if(speed != 0){
@@ -152,15 +165,19 @@ else {
 
 if((0 &lt;= direction and direction &lt; 45) or (360 &gt;= direction and direction &gt; 315)) {
     sprite_index = sprite_list[? sprite_modifier + "right"]
+    mouth_offset = 1
 }
 else if(45 &lt;= direction and direction &lt; 135) {
     sprite_index = sprite_list[? sprite_modifier + "rear"]
+    mouth_offset = 0
 }
 else if(135 &lt;= direction and direction &lt; 225) {
     sprite_index = sprite_list[? sprite_modifier + "left"]
+    mouth_offset = -1
 }
 else {
     sprite_index = sprite_list[? sprite_modifier + "front"]
+    mouth_offset = 0
 }
 
 draw_sprite(sprite_index, image_index, x, y)
