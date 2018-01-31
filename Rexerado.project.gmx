@@ -83,6 +83,29 @@
       <sprite>sprites\spr_bone</sprite>
     </sprites>
     <sprite>sprites\corral_gate</sprite>
+    <sprites name="Terrain">
+      <sprite>sprites\bv_1</sprite>
+      <sprite>sprites\bv_2</sprite>
+      <sprite>sprites\bv_3</sprite>
+      <sprite>sprites\bv_4</sprite>
+      <sprite>sprites\bv_5</sprite>
+      <sprite>sprites\bv_6</sprite>
+      <sprite>sprites\bv_7</sprite>
+      <sprite>sprites\bv_8</sprite>
+      <sprite>sprites\bv_9</sprite>
+      <sprite>sprites\bv_10</sprite>
+      <sprite>sprites\bv_11</sprite>
+      <sprite>sprites\bv_12</sprite>
+      <sprite>sprites\bv_13</sprite>
+      <sprite>sprites\bv_14</sprite>
+    </sprites>
+    <sprites name="UI">
+      <sprite>sprites\ui_cat_meter</sprite>
+      <sprite>sprites\ui_fancy_power</sprite>
+      <sprite>sprites\ui_score</sprite>
+      <sprite>sprites\ui_level_time</sprite>
+    </sprites>
+    <sprite>sprites\spr_credits</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_dirt</background>
@@ -112,7 +135,6 @@
     <font>fonts\fnt_UI</font>
   </fonts>
   <objects name="objects">
-    <object>objects\UI_Controller</object>
     <object>objects\Fancy</object>
     <objects name="Distractions">
       <object>objects\distraction_base</object>
@@ -147,12 +169,20 @@
       <object>objects\cat_codgey</object>
       <object>objects\cat_kitty</object>
     </objects>
+    <objects name="UI">
+      <object>objects\UI_Controller</object>
+      <object>objects\cat_meter</object>
+      <object>objects\fancy_power</object>
+      <object>objects\score</object>
+      <object>objects\level_time</object>
+    </objects>
+    <object>objects\credits</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main_Menu</room>
     <room>rooms\Test_Level</room>
     <room>rooms\End_Game</room>
-    <room>rooms\Credits</room>
+    <room>rooms\Credits_Screen</room>
     <room>rooms\Instructions</room>
   </rooms>
   <constants number="1">
