@@ -5,7 +5,7 @@
 
 
 // Check wander target distance
-if(false) {
+if(false){
 if(point_distance(x, y, state_vars[? "wander_x"], state_vars[? "wander_y"]) > sprite_width / 2) {
     move_towards_point(state_vars[? "wander_x"], state_vars[? "wander_y"], speed_value * 0.75)
 }

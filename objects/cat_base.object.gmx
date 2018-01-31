@@ -56,7 +56,7 @@ ds_map_add(state, "captured", state_captured)
 state_vars = ds_map_create()
 
 // Default to wandering
-state_current = "idle"
+state_current = "wandering"
 enter_state_wander(self)
 
 //Sprites
@@ -92,7 +92,7 @@ perceived_objects = get_objects_in_circle(x + percept_offset_x, y + percept_offs
 if(motivation == 0) {
     for(index = 0; index &lt; ds_list_size(perceived_objects); index++) {
         obj_instance = perceived_objects[| index]
-        if(object_is_ancestor(obj_instance, distraction_base)) {
+        if(object_is_ancestor(obj_instance.object_index, distraction_base)) {
             state_current = "playing"
             enter_state_play(obj_instance)
             exit
