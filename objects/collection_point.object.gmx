@@ -51,7 +51,9 @@ cat_count = 0
           <argument>
             <kind>1</kind>
             <string>audio_play_sound(cat_got, 1, false)
-instance_destroy(other)
+with(other) {
+    instance_destroy()
+}
 cat_count++
 score++
 </string>
